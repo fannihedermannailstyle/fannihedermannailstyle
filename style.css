@@ -2590,64 +2590,106 @@ button {
 }
 
 /* Mobilon is látható maradjon a kép. */
-/* FINOM LEVELES HÁTTÉR A KIJELÖLT SZAKASZOK MÖGÖTT */
+/* =========================================================
+   UGYANAZ A HÁTTÉR AZ EGÉSZ OLDALON, MINT A HERO RÉSZEN
+   ========================================================= */
 
-html,
-body {
+html {
     min-height: 100%;
+    background-color: #fbf5f1;
 }
 
 body {
+    min-height: 100%;
+
     background-color: #fbf5f1 !important;
 
     background-image:
         linear-gradient(
-            rgba(251, 245, 241, 0.80),
-            rgba(251, 245, 241, 0.80)
+            90deg,
+            rgba(251, 245, 241, 0.98) 0%,
+            rgba(251, 245, 241, 0.92) 34%,
+            rgba(251, 245, 241, 0.62) 56%,
+            rgba(251, 245, 241, 0.12) 100%
         ),
-        url("./images/leveles-hatter.jpg") !important;
+        radial-gradient(
+            circle at 25% 35%,
+            rgba(242, 223, 217, 0.48),
+            transparent 38%
+        ),
+        url("./images/botanical-hero.jpg") !important;
 
     background-repeat:
         no-repeat,
-        repeat !important;
+        no-repeat,
+        no-repeat !important;
 
     background-position:
         center,
-        center top !important;
+        center,
+        center right !important;
 
     background-size:
         cover,
-        720px auto !important;
+        cover,
+        cover !important;
 
     background-attachment:
+        fixed,
         fixed,
         fixed !important;
 }
 
-/* Ezek mögött fusson végig a közös háttér */
+/* Minden szakasz mutassa ugyanazt a közös hátteret */
 
+.hero,
+.about-section,
+.services-section,
+.price-section,
+.gallery-section,
+.reviews-section,
+.contact-section,
 #rolam,
 #szolgaltatasok,
 #arlista,
 #galeria,
 #velemenyek,
-.about-section,
-.services-section,
-.price-section,
-.gallery-section,
-.reviews-section {
+#kapcsolat {
     background: transparent !important;
     background-color: transparent !important;
     background-image: none !important;
+}
+
+/* A hero régi külön háttérrétegének kikapcsolása */
+
+.hero::after {
+    content: none !important;
+    display: none !important;
+    background: none !important;
 }
 
 /* Mobil */
 
 @media (max-width: 700px) {
     body {
+        background-image:
+            linear-gradient(
+                rgba(251, 245, 241, 0.90),
+                rgba(251, 245, 241, 0.90)
+            ),
+            url("./images/botanical-hero.jpg") !important;
+
+        background-repeat:
+            no-repeat,
+            no-repeat !important;
+
+        background-position:
+            center,
+            62% top !important;
+
         background-size:
             cover,
-            560px auto !important;
+            cover !important;
 
         background-attachment:
             scroll,
