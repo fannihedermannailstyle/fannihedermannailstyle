@@ -2746,4 +2746,12 @@ body {
     .review-card {
         transition: none !important;
     }
+}/* Mobilon a jobb oldali levelek is látszódjanak */
+
+@media (max-width: 700px) {
+    body {
+        background-position: 88% top !important;
+        background-size: cover !important;
+        background-attachment: scroll !important;
+    }
 }
