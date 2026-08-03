@@ -2749,17 +2749,29 @@ body {
 }/* Mobilon a jobb oldali levelek is látszódjanak */
 
 @media (max-width: 700px) {
-    main {
+    body {
+        position: relative;
+        isolation: isolate;
+        background-color: #f8f4ee !important;
+    }
+
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+
         background-image:
             linear-gradient(
-                rgba(248, 244, 238, 0.82),
-                rgba(248, 244, 238, 0.82)
+                rgba(248, 244, 238, 0.62),
+                rgba(248, 244, 238, 0.62)
             ),
-            url("./images/botanical-hero.jpg") !important;
+            url("./images/botanical-hero.jpg");
 
-        background-size: 100% auto !important;
-        background-position: center top !important;
-        background-repeat: repeat-y !important;
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
     }
 
     .hero,
@@ -2769,6 +2781,7 @@ body {
     .gallery-section,
     .reviews-section,
     .contact-section {
-        background: transparent !important;
+        background-color: transparent !important;
+        background-image: none !important;
     }
 }
