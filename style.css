@@ -2590,37 +2590,20 @@ button {
 }
 
 /* Mobilon is látható maradjon a kép. */
-@media (max-width: 700px) {
-    #rolam,
-    #szolgaltatasok,
-    #arlista,
-    #galeria,
-    #velemenyek,
-    .about-section,
-    .services-section,
-    .price-section,
-    .gallery-section,
-    .reviews-section {
-        background-image: url("./images/leveles-hatter.jpg") !important;
-        background-repeat: no-repeat !important;
-        background-position: 62% center !important;
-        background-size: cover !important;
-        background-attachment: scroll !important;
-    }
-/* FINOM, NEM PIXELES LEVELES HÁTTÉR AZ EGÉSZ OLDALON */
+/* FINOM LEVELES HÁTTÉR A KIJELÖLT SZAKASZOK MÖGÖTT */
 
-html {
+html,
+body {
     min-height: 100%;
-    background-color: #fbf5f1;
 }
 
 body {
-    min-height: 100%;
+    background-color: #fbf5f1 !important;
 
     background-image:
         linear-gradient(
-            rgba(251, 245, 241, 0.82),
-            rgba(251, 245, 241, 0.82)
+            rgba(251, 245, 241, 0.80),
+            rgba(251, 245, 241, 0.80)
         ),
         url("./images/leveles-hatter.jpg") !important;
 
@@ -2633,7 +2616,7 @@ body {
         center top !important;
 
     background-size:
-        100% 100%,
+        cover,
         720px auto !important;
 
     background-attachment:
@@ -2641,32 +2624,21 @@ body {
         fixed !important;
 }
 
-/* A szakaszok ne takarják el a közös hátteret */
+/* Ezek mögött fusson végig a közös háttér */
 
-.hero,
-.about-section,
-.services-section,
-.price-section,
-.gallery-section,
-.reviews-section,
-.contact-section,
 #rolam,
 #szolgaltatasok,
 #arlista,
 #galeria,
 #velemenyek,
-#kapcsolat {
+.about-section,
+.services-section,
+.price-section,
+.gallery-section,
+.reviews-section {
     background: transparent !important;
     background-color: transparent !important;
     background-image: none !important;
-}
-
-/* A hero régi háttérrétegének kikapcsolása */
-
-.hero::after {
-    content: none !important;
-    display: none !important;
-    background: none !important;
 }
 
 /* Mobil */
@@ -2674,7 +2646,7 @@ body {
 @media (max-width: 700px) {
     body {
         background-size:
-            100% 100%,
+            cover,
             560px auto !important;
 
         background-attachment:
