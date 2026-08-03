@@ -2750,8 +2750,9 @@ body {
 
 @media (max-width: 700px) {
     body {
-        background-position: 88% top !important;
-        background-size: cover !important;
+        background-size: 850px auto !important;
+        background-position: center 90px !important;
+        background-repeat: no-repeat !important;
         background-attachment: scroll !important;
     }
 }
