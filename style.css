@@ -2695,4 +2695,18 @@ body {
             scroll,
             scroll !important;
     }
+}/* Elegánsabb bevezető és kiegészítő szövegek */
+
+.price-heading > p:last-child,
+.services-heading > p,
+.gallery-heading > p,
+.reviews-heading > p,
+.contact-heading > p:last-child,
+.about-lead {
+    color: var(--color-green-dark);
+    font-family: var(--font-heading);
+    font-size: clamp(1.18rem, 1.5vw, 1.38rem);
+    font-weight: 500;
+    line-height: 1.65;
+    letter-spacing: 0.01em;
 }
