@@ -1448,7 +1448,7 @@ button {
             rgba(251, 245, 241, 0.78) 62%,
             rgba(251, 245, 241, 0.45) 100%
         ),
-        url("./images/botanical-hero.jpg");
+        url("./images/leveles-hatter.jpg");
 
     background-repeat: no-repeat;
     background-position: center;
@@ -1462,7 +1462,7 @@ button {
                 rgba(251, 245, 241, 0.92),
                 rgba(251, 245, 241, 0.95)
             ),
-            url("./images/botanical-hero.jpg");
+            url("./images/leveles-hatter.jpg");
 
         background-position: 58% center;
         background-size: cover;
@@ -1483,7 +1483,7 @@ button {
             rgba(242, 223, 217, 0.48),
             transparent 38%
         ),
-        url("./images/botanical-hero.jpg");
+        url("./images/leveles-hatter.jpg");
 
     background-repeat: no-repeat;
     background-position:
@@ -1849,7 +1849,7 @@ button {
             rgba(251, 245, 241, 0.97),
             rgba(251, 245, 241, 0.82)
         ),
-        url("./images/botanical-hero.jpg");
+        url("./images/leveles-hatter.jpg");
 
     background-repeat: no-repeat;
     background-position: center;
@@ -2084,7 +2084,7 @@ button {
                 rgba(251, 245, 241, 0.92),
                 rgba(251, 245, 241, 0.94)
             ),
-            url("./images/botanical-hero.jpg");
+            url("./images/leveles-hatter.jpg");
 
         background-position: center;
         background-size: cover;
@@ -2527,4 +2527,110 @@ button {
     display: block;
     object-fit: cover;
     object-position: center 20%;
+}
+
+/* =========================================================
+   VÉGLEGES LEVELES HÁTTÉR
+   RÓLAM · SZOLGÁLTATÁSOK · ÁRLISTA · GALÉRIA · VÉLEMÉNYEK
+   NINCS BÉZS FEDŐRÉTEG, EZÉRT A KÉP TÉNYLEG LÁTSZIK.
+   ========================================================= */
+
+#rolam,
+#szolgaltatasok,
+#arlista,
+#galeria,
+#velemenyek,
+.about-section,
+.services-section,
+.price-section,
+.gallery-section,
+.reviews-section {
+    background-color: transparent !important;
+    background-image: url("./images/leveles-hatter.jpg") !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+    background-blend-mode: normal !important;
+}
+
+/* A korábbi nagy dekorációs rétegek ne fedjék el a leveles képet. */
+#rolam::before,
+#rolam::after,
+#szolgaltatasok::before,
+#szolgaltatasok::after,
+#arlista::before,
+#arlista::after,
+#galeria::before,
+#galeria::after,
+#velemenyek::before,
+#velemenyek::after,
+.about-section::before,
+.about-section::after,
+.services-section::before,
+.services-section::after,
+.price-section::before,
+.price-section::after,
+.gallery-section::before,
+.gallery-section::after,
+.reviews-section::before,
+.reviews-section::after {
+    content: none !important;
+    display: none !important;
+    background: none !important;
+}
+
+/* A szakaszok belső fő konténerei ne kapjanak teljes felületű hátteret. */
+.about-container,
+.services-container,
+.price-container,
+.gallery-container,
+.reviews-container {
+    background: transparent !important;
+}
+
+/* Mobilon is látható maradjon a kép. */
+@media (max-width: 700px) {
+    #rolam,
+    #szolgaltatasok,
+    #arlista,
+    #galeria,
+    #velemenyek,
+    .about-section,
+    .services-section,
+    .price-section,
+    .gallery-section,
+    .reviews-section {
+        background-image: url("./images/leveles-hatter.jpg") !important;
+        background-repeat: no-repeat !important;
+        background-position: 62% center !important;
+        background-size: cover !important;
+        background-attachment: scroll !important;
+    }
+}html,
+body {
+    min-height: 100%;
+}
+
+body {
+    background-image: url("./images/leveles-hatter.jpg") !important;
+    background-repeat: no-repeat !important;
+    background-position: center top !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+}
+
+#rolam,
+#szolgaltatasok,
+#arlista,
+#galeria,
+#velemenyek,
+.about-section,
+.services-section,
+.price-section,
+.gallery-section,
+.reviews-section {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
 }
