@@ -2749,9 +2749,10 @@ body {
 }/* Mobilon a jobb oldali levelek is látszódjanak */
 
 @media (max-width: 700px) {
-    body {
-        background-size: 850px auto !important;
-        background-position: center 90px !important;
+    .hero {
+        background-image: url("./images/botanical-hero.jpg") !important;
+        background-size: cover !important;
+        background-position: center top !important;
         background-repeat: no-repeat !important;
         background-attachment: scroll !important;
     }
