@@ -2607,84 +2607,78 @@ button {
         background-size: cover !important;
         background-attachment: scroll !important;
     }
-/* FINOM, ÉLES, FOLYAMATOS LEVELES HÁTTÉR */
+/* FINOM, NEM PIXELES LEVELES HÁTTÉR AZ EGÉSZ OLDALON */
 
 html {
     min-height: 100%;
-    background-color: #fbf5f1 !important;
+    background-color: #fbf5f1;
 }
 
 body {
-    position: relative;
     min-height: 100%;
-    isolation: isolate;
-    background: #fbf5f1 !important;
-}
-
-/*
-   Nem nagyítjuk ki teljes képernyőszélességre.
-   Közel az eredeti méretéhez ismétlődik, ezért nem lesz pixeles.
-*/
-body::before {
-    content: "" !important;
-    display: block !important;
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    pointer-events: none;
 
     background-image:
         linear-gradient(
-            rgba(251, 245, 241, 0.76),
-            rgba(251, 245, 241, 0.76)
+            rgba(251, 245, 241, 0.82),
+            rgba(251, 245, 241, 0.82)
         ),
-        url("./images/leveles-hatter.jpg");
+        url("./images/leveles-hatter.jpg") !important;
 
     background-repeat:
         no-repeat,
-        repeat;
+        repeat !important;
 
     background-position:
         center,
-        center top;
+        center top !important;
 
     background-size:
         100% 100%,
-        680px auto;
+        720px auto !important;
 
-    filter:
-        saturate(0.65)
-        contrast(0.92)
-        brightness(1.08);
+    background-attachment:
+        fixed,
+        fixed !important;
 }
 
-/* Ezeken a részeken látszódjon a közös háttér */
+/* A szakaszok ne takarják el a közös hátteret */
 
+.hero,
+.about-section,
+.services-section,
+.price-section,
+.gallery-section,
+.reviews-section,
+.contact-section,
 #rolam,
 #szolgaltatasok,
 #arlista,
 #galeria,
 #velemenyek,
-.about-section,
-.services-section,
-.price-section,
-.gallery-section,
-.reviews-section {
+#kapcsolat {
     background: transparent !important;
     background-color: transparent !important;
     background-image: none !important;
 }
 
+/* A hero régi háttérrétegének kikapcsolása */
+
+.hero::after {
+    content: none !important;
+    display: none !important;
+    background: none !important;
+}
+
 /* Mobil */
 
 @media (max-width: 700px) {
-    body::before {
+    body {
         background-size:
             100% 100%,
-            560px auto;
+            560px auto !important;
 
-        background-position:
-            center,
-            center top;
+        background-attachment:
+            scroll,
+            scroll !important;
     }
 }
