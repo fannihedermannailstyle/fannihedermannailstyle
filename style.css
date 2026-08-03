@@ -2749,7 +2749,13 @@ body {
 }/* Mobilon a jobb oldali levelek is látszódjanak */
 
 @media (max-width: 700px) {
-    .hero {
+    .hero,
+    .about-section,
+    .services-section,
+    .price-section,
+    .gallery-section,
+    .reviews-section,
+    .contact-section {
         background-image: url("./images/botanical-hero.jpg") !important;
         background-size: cover !important;
         background-position: center top !important;
