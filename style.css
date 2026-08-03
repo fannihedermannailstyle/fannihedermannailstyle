@@ -2709,4 +2709,41 @@ body {
     font-weight: 500;
     line-height: 1.65;
     letter-spacing: 0.01em;
+}/* Mobilos teljesítmény javítása */
+
+@media (max-width: 700px) {
+    body {
+        background-attachment: scroll !important;
+    }
+
+    .site-header {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+    }
+
+    .hero,
+    .about-section,
+    .services-section,
+    .price-section,
+    .gallery-section,
+    .reviews-section,
+    .contact-section {
+        background-attachment: scroll !important;
+    }
+
+    .hero-image-placeholder,
+    .about-image-placeholder,
+    .gallery-item,
+    .review-card,
+    .booking-card,
+    .contact-booking,
+    .contact-detail {
+        box-shadow: none !important;
+    }
+
+    .gallery-item img,
+    .service-card,
+    .review-card {
+        transition: none !important;
+    }
 }
