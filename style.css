@@ -2607,18 +2607,58 @@ button {
         background-size: cover !important;
         background-attachment: scroll !important;
     }
-}html,
-body {
+/* FINOM, ÉLES, FOLYAMATOS LEVELES HÁTTÉR */
+
+html {
     min-height: 100%;
+    background-color: #fbf5f1 !important;
 }
 
 body {
-    background-image: url("./images/leveles-hatter.jpg") !important;
-    background-repeat: no-repeat !important;
-    background-position: center top !important;
-    background-size: cover !important;
-    background-attachment: fixed !important;
+    position: relative;
+    min-height: 100%;
+    isolation: isolate;
+    background: #fbf5f1 !important;
 }
+
+/*
+   Nem nagyítjuk ki teljes képernyőszélességre.
+   Közel az eredeti méretéhez ismétlődik, ezért nem lesz pixeles.
+*/
+body::before {
+    content: "" !important;
+    display: block !important;
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    background-image:
+        linear-gradient(
+            rgba(251, 245, 241, 0.76),
+            rgba(251, 245, 241, 0.76)
+        ),
+        url("./images/leveles-hatter.jpg");
+
+    background-repeat:
+        no-repeat,
+        repeat;
+
+    background-position:
+        center,
+        center top;
+
+    background-size:
+        100% 100%,
+        680px auto;
+
+    filter:
+        saturate(0.65)
+        contrast(0.92)
+        brightness(1.08);
+}
+
+/* Ezeken a részeken látszódjon a közös háttér */
 
 #rolam,
 #szolgaltatasok,
@@ -2633,4 +2673,18 @@ body {
     background: transparent !important;
     background-color: transparent !important;
     background-image: none !important;
+}
+
+/* Mobil */
+
+@media (max-width: 700px) {
+    body::before {
+        background-size:
+            100% 100%,
+            560px auto;
+
+        background-position:
+            center,
+            center top;
+    }
 }
