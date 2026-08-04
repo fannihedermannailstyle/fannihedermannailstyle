@@ -3125,3 +3125,173 @@ body {
         right: 10px;
     }
 }
+
+/* =========================================================
+   3 × 3-AS, OLDALANKÉNT 9 KÉPES GALÉRIA
+   Ezt a style.css LEGVÉGÉRE másold.
+   ========================================================= */
+
+.gallery-section {
+    background: var(--color-blush-light) !important;
+    background-image: none !important;
+}
+
+.gallery-section::before,
+.gallery-section::after {
+    display: none !important;
+}
+
+.home-gallery-grid {
+    width: min(100%, 1120px);
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.home-gallery-card {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    aspect-ratio: 4 / 5;
+    background-color: #ffffff;
+    border: 5px solid rgba(255, 255, 255, 0.96);
+    border-radius: 16px;
+    box-shadow: 0 16px 38px rgba(29, 64, 50, 0.13);
+}
+
+.home-gallery-card a {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.home-gallery-card img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    transition:
+        transform 400ms ease,
+        filter 400ms ease;
+}
+
+.home-gallery-card:hover img {
+    transform: scale(1.035);
+    filter: brightness(0.96);
+}
+
+.home-gallery-pagination {
+    margin-top: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.gallery-page-button {
+    min-width: 132px;
+    padding: 13px 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #ffffff;
+    background-color: var(--color-green-dark);
+    border: 0;
+    border-radius: 999px;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+}
+
+.gallery-page-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+}
+
+.gallery-page-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.35;
+}
+
+.gallery-page-status {
+    min-width: 70px;
+    color: var(--color-green-dark);
+    font-weight: 700;
+    text-align: center;
+}
+
+.gallery-more-wrap {
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+}
+
+.full-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.full-gallery-card {
+    overflow: hidden;
+    margin: 0;
+    aspect-ratio: 4 / 5;
+    border: 5px solid #ffffff;
+    border-radius: 16px;
+}
+
+.full-gallery-card a,
+.full-gallery-card img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.full-gallery-card img {
+    object-fit: cover;
+    object-position: center;
+}
+
+.full-gallery-load-more {
+    margin-top: 36px;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 900px) {
+    .home-gallery-grid,
+    .full-gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+}
+
+@media (max-width: 560px) {
+    .home-gallery-grid,
+    .full-gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .home-gallery-card,
+    .full-gallery-card {
+        max-width: 440px;
+        width: 100%;
+        margin-inline: auto;
+    }
+
+    .home-gallery-pagination {
+        gap: 12px;
+    }
+
+    .gallery-page-button {
+        min-width: 52px;
+        padding: 13px 16px;
+    }
+
+    .gallery-page-button span {
+        display: none;
+    }
+}

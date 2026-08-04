@@ -2,8 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const header = document.querySelector(".site-header");
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
 
-    /* Oldalon belüli sima görgetés */
-
     anchorLinks.forEach((link) => {
         link.addEventListener("click", (event) => {
             const targetId = link.getAttribute("href");
@@ -43,146 +41,158 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    /* Főoldali lapozható galéria */
+    const imageFiles = [
+        "IMG_8800.webp",
+        "IMG_8792.webp",
+        "IMG_8771.webp",
+        "IMG_8404.webp",
+        "IMG_8391.webp",
+        "IMG_8384.webp",
+        "IMG_8372.webp",
+        "IMG_8357.webp",
+        "IMG_8352.webp",
+        "IMG_8305.webp",
+        "IMG_8292.webp",
+        "IMG_8273.webp",
+        "IMG_8239.webp",
+        "IMG_8230.webp",
+        "IMG_8185.webp",
+        "IMG_8160.webp",
+        "IMG_8065.webp",
+        "IMG_7907.webp",
+        "IMG_7860.webp",
+        "IMG_7842.webp",
+        "IMG_7806.webp",
+        "IMG_7627.webp",
+        "IMG_7608.webp",
+        "IMG_7580.webp",
+        "IMG_7571.webp",
+        "IMG_7554.webp",
+        "IMG_7543.webp",
+        "IMG_7537.webp",
+        "IMG_7528.webp",
+        "IMG_7520.webp"
+    ];
 
-    const slider = document.querySelector("[data-gallery-slider]");
-
-    if (!slider) {
-        return;
-    }
-
-    const slides = Array.from(
-        slider.querySelectorAll(".featured-gallery-slide")
-    );
+    const galleryGrid =
+        document.getElementById("home-gallery-grid");
 
     const previousButton =
-        slider.querySelector("[data-gallery-prev]");
+        document.getElementById("home-gallery-prev");
 
     const nextButton =
-        slider.querySelector("[data-gallery-next]");
+        document.getElementById("home-gallery-next");
 
-    const dotsContainer =
-        document.querySelector("[data-gallery-dots]");
+    const pageStatus =
+        document.getElementById("home-gallery-page-status");
 
-    if (slides.length === 0) {
+    if (
+        !galleryGrid ||
+        !previousButton ||
+        !nextButton ||
+        !pageStatus
+    ) {
         return;
     }
 
-    let currentSlide = 0;
-    let automaticSlider = null;
-    const dots = [];
+    const imagesPerPage = 9;
+    const totalPages = Math.ceil(
+        imageFiles.length / imagesPerPage
+    );
 
-    function showSlide(index) {
-        currentSlide =
-            (index + slides.length) % slides.length;
+    let currentPage = 1;
 
-        slides.forEach((slide, slideIndex) => {
-            slide.classList.toggle(
-                "is-active",
-                slideIndex === currentSlide
+    function createGalleryCard(fileName, imageNumber) {
+        const figure = document.createElement("figure");
+        const link = document.createElement("a");
+        const image = document.createElement("img");
+
+        figure.className = "home-gallery-card";
+
+        link.href = `./images/${fileName}`;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+
+        image.src = `./images/${fileName}`;
+        image.alt =
+            `Fanni Hederman Nailstyle körömmunka ${imageNumber}`;
+        image.loading = "lazy";
+        image.decoding = "async";
+
+        link.appendChild(image);
+        figure.appendChild(link);
+
+        return figure;
+    }
+
+    function renderGalleryPage() {
+        const firstImageIndex =
+            (currentPage - 1) * imagesPerPage;
+
+        const pageImages = imageFiles.slice(
+            firstImageIndex,
+            firstImageIndex + imagesPerPage
+        );
+
+        const fragment = document.createDocumentFragment();
+
+        pageImages.forEach((fileName, index) => {
+            fragment.appendChild(
+                createGalleryCard(
+                    fileName,
+                    firstImageIndex + index + 1
+                )
             );
         });
 
-        dots.forEach((dot, dotIndex) => {
-            const isActive =
-                dotIndex === currentSlide;
+        galleryGrid.replaceChildren(fragment);
 
-            dot.classList.toggle(
-                "is-active",
-                isActive
-            );
+        pageStatus.textContent =
+            `${currentPage} / ${totalPages}`;
 
-            dot.setAttribute(
-                "aria-current",
-                isActive ? "true" : "false"
-            );
+        previousButton.disabled =
+            currentPage === 1;
+
+        nextButton.disabled =
+            currentPage === totalPages;
+    }
+
+    function scrollToGallery() {
+        const headerHeight = header
+            ? header.getBoundingClientRect().height
+            : 0;
+
+        const galleryTop =
+            galleryGrid.getBoundingClientRect().top +
+            window.scrollY -
+            headerHeight -
+            24;
+
+        window.scrollTo({
+            top: Math.max(0, galleryTop),
+            behavior: "smooth"
         });
     }
 
-    /* Lapozópontok létrehozása */
-
-    if (dotsContainer) {
-        slides.forEach((slide, index) => {
-            const dot =
-                document.createElement("button");
-
-            dot.type = "button";
-            dot.className = "featured-gallery-dot";
-
-            dot.setAttribute(
-                "aria-label",
-                `${index + 1}. kép megjelenítése`
-            );
-
-            dot.addEventListener("click", () => {
-                showSlide(index);
-                restartAutomaticSlider();
-            });
-
-            dotsContainer.appendChild(dot);
-            dots.push(dot);
-        });
-    }
-
-    function stopAutomaticSlider() {
-        if (automaticSlider !== null) {
-            window.clearInterval(automaticSlider);
-            automaticSlider = null;
+    previousButton.addEventListener("click", () => {
+        if (currentPage <= 1) {
+            return;
         }
-    }
 
-    function startAutomaticSlider() {
-        stopAutomaticSlider();
+        currentPage -= 1;
+        renderGalleryPage();
+        scrollToGallery();
+    });
 
-        automaticSlider = window.setInterval(() => {
-            showSlide(currentSlide + 1);
-        }, 5000);
-    }
+    nextButton.addEventListener("click", () => {
+        if (currentPage >= totalPages) {
+            return;
+        }
 
-    function restartAutomaticSlider() {
-        startAutomaticSlider();
-    }
+        currentPage += 1;
+        renderGalleryPage();
+        scrollToGallery();
+    });
 
-    /* Előző kép */
-
-    if (previousButton) {
-        previousButton.addEventListener("click", () => {
-            showSlide(currentSlide - 1);
-            restartAutomaticSlider();
-        });
-    }
-
-    /* Következő kép */
-
-    if (nextButton) {
-        nextButton.addEventListener("click", () => {
-            showSlide(currentSlide + 1);
-            restartAutomaticSlider();
-        });
-    }
-
-    /* Automatikus lapozás megállítása használat közben */
-
-    slider.addEventListener(
-        "mouseenter",
-        stopAutomaticSlider
-    );
-
-    slider.addEventListener(
-        "mouseleave",
-        startAutomaticSlider
-    );
-
-    slider.addEventListener(
-        "focusin",
-        stopAutomaticSlider
-    );
-
-    slider.addEventListener(
-        "focusout",
-        startAutomaticSlider
-    );
-
-    showSlide(0);
-    startAutomaticSlider();
+    renderGalleryPage();
 });
