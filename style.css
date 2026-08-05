@@ -3295,3 +3295,103 @@ body {
         display: none;
     }
 }
+/* Elegánsabb és jobban olvasható betűk */
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Lora:wght@400;500;600&display=swap");
+
+body {
+    font-family: "Lora", serif;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #26352e;
+}
+
+h1,
+h2,
+h3,
+.logo-name,
+.logo-subtitle,
+.about-signature {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
+    color: #1f3028;
+}
+
+h1 {
+    font-size: clamp(3.2rem, 7vw, 6.5rem);
+    line-height: 0.95;
+}
+
+h2 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.05;
+}
+
+h3 {
+    font-size: 1.7rem;
+}
+
+p {
+    font-size: 1.08rem;
+    line-height: 1.9;
+    color: #35453d;
+}
+
+.about-content p {
+    font-size: 1.12rem;
+    font-weight: 500;
+    color: #26352e;
+    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.9);
+}
+
+.about-lead {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.45rem !important;
+    line-height: 1.7 !important;
+    color: #1f3028 !important;
+}
+
+.main-navigation a,
+.header-button,
+.primary-button,
+.secondary-button,
+.text-link,
+.reviews-link {
+    font-family: "Lora", serif;
+    font-weight: 600;
+}
+
+.section-eyebrow,
+.hero-eyebrow,
+.booking-card-label,
+.contact-label,
+.contact-booking-label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: #4c6658;
+}
+
+.text-link {
+    font-size: 1.05rem;
+    color: #203c30;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.75;
+    }
+
+    .about-content p {
+        font-size: 1.02rem;
+    }
+
+    .about-lead {
+        font-size: 1.25rem !important;
+    }
+}
