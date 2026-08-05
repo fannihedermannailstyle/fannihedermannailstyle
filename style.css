@@ -3948,89 +3948,32 @@ p {
         font-size: 1.2rem !important;
     }
 }
-/* ==================================================
-   VÉGLEGES OLVASHATÓSÁGI JAVÍTÁS
-   ================================================== */
-
-/* Fejléc */
-
-.logo-name {
-    font-size: 1.9rem !important;
-    font-weight: 700 !important;
-}
-
-.logo-subtitle {
-    font-size: 0.8rem !important;
-}
-
-.main-navigation a {
-    color: #183429 !important;
-    font-family: var(--font-body) !important;
-    font-size: 1.05rem !important;
-    font-weight: 700 !important;
-}
-
-.header-button {
-    font-size: 1rem !important;
-    font-weight: 700 !important;
-}
-
-/* A képeken látható rövid bevezető szövegek */
+/* Rövid szakaszleírások – elegáns, doboz nélkül */
 
 .services-heading > p,
 .price-heading > p:last-child,
 .gallery-heading > p,
 .reviews-heading > p,
 .contact-heading > p:last-child {
-    max-width: 680px !important;
-    padding: 18px 22px !important;
+    max-width: 560px !important;
+    padding: 0 !important;
 
-    color: #142d23 !important;
-    background-color: rgba(255, 253, 249, 0.9) !important;
+    color: #203b30 !important;
+    background: transparent !important;
 
-    font-family: var(--font-body) !important;
-    font-size: 1.22rem !important;
+    font-family: var(--font-heading) !important;
+    font-size: clamp(1.3rem, 1.5vw, 1.55rem) !important;
     font-weight: 600 !important;
-    line-height: 1.75 !important;
-    letter-spacing: 0 !important;
+    line-height: 1.55 !important;
+    letter-spacing: 0.01em !important;
 
-    border-radius: 8px;
-    box-shadow: 0 8px 28px rgba(25, 48, 38, 0.08);
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
 
     opacity: 1 !important;
     text-shadow: none !important;
 }
-
-/* Rólam rész */
-
-.about-content p,
-.about-content .about-lead {
-    color: #142d23 !important;
-    font-family: var(--font-body) !important;
-    font-size: 1.22rem !important;
-    font-weight: 600 !important;
-    line-height: 1.8 !important;
-    letter-spacing: 0 !important;
-    opacity: 1 !important;
-    text-shadow: none !important;
-}
-
-/* Kártyák és további bekezdések */
-
-.service-card p,
-.booking-card p,
-.contact-booking p,
-.contact-detail p {
-    color: #1a3429 !important;
-    font-family: var(--font-body) !important;
-    font-size: 1.1rem !important;
-    font-weight: 500 !important;
-    line-height: 1.75 !important;
-    opacity: 1 !important;
-    text-shadow: none !important;
-}
-
-/* Mobil */
 
 @media (max-width: 768px) {
     .services-heading > p,
@@ -4038,12 +3981,7 @@ p {
     .gallery-heading > p,
     .reviews-heading > p,
     .contact-heading > p:last-child {
-        padding: 16px 18px !important;
-        font-size: 1.08rem !important;
-    }
-
-    .about-content p,
-    .about-content .about-lead {
-        font-size: 1.08rem !important;
+        font-size: 1.2rem !important;
+        line-height: 1.55 !important;
     }
 }
