@@ -4297,4 +4297,19 @@ p {
         object-fit: cover;
         border-radius: 10px;
     }
+}/* Képes fejléc-logó */
+
+.site-logo-image {
+    display: block;
+    width: 180px;
+    max-height: 72px;
+    height: auto;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .site-logo-image {
+        width: 145px;
+        max-height: 58px;
+    }
 }
