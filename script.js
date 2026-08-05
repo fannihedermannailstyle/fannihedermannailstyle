@@ -150,12 +150,31 @@ document.addEventListener("DOMContentLoaded", () => {
         nextButton &&
         pageStatus
     ) {
-        const imagesPerPage = 9;
-        const totalPages =
-            Math.ceil(imageFiles.length / imagesPerPage);
-
         let currentPage = 0;
 
+let imagesPerPage =
+    window.innerWidth <= 768 ? 6 : 9;
+
+let totalPages =
+    Math.ceil(imageFiles.length / imagesPerPage);
+
+    let mobileView = window.innerWidth <= 768;
+
+window.addEventListener("resize", () => {
+    const isMobile = window.innerWidth <= 768;
+
+    if (isMobile === mobileView) {
+        return;
+    }
+
+    mobileView = isMobile;
+    imagesPerPage = isMobile ? 6 : 9;
+    totalPages =
+        Math.ceil(imageFiles.length / imagesPerPage);
+currentPage = 0;
+renderGallery();
+    
+});
         function renderGallery() {
             const start = currentPage * imagesPerPage;
             const pageImages = imageFiles.slice(
