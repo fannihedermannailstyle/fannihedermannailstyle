@@ -86,3 +86,43 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+/* Mobil hamburger menü */
+
+document.addEventListener("DOMContentLoaded", () => {
+    const menuButton = document.querySelector(".menu-button");
+    const navigation = document.querySelector(".main-navigation");
+
+    if (!menuButton || !navigation) {
+        return;
+    }
+
+    function setMenuOpen(open) {
+        navigation.classList.toggle("is-open", open);
+        menuButton.classList.toggle("is-open", open);
+        menuButton.setAttribute("aria-expanded", String(open));
+    }
+
+    menuButton.addEventListener("click", (event) => {
+        event.stopPropagation();
+
+        const isOpen =
+            menuButton.getAttribute("aria-expanded") === "true";
+
+        setMenuOpen(!isOpen);
+    });
+
+    navigation.addEventListener("click", (event) => {
+        if (event.target.closest("a")) {
+            setMenuOpen(false);
+        }
+    });
+
+    document.addEventListener("click", (event) => {
+        if (
+            !menuButton.contains(event.target) &&
+            !navigation.contains(event.target)
+        ) {
+            setMenuOpen(false);
+        }
+    });
+});
