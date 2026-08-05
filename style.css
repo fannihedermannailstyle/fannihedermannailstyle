@@ -3387,11 +3387,25 @@ p {
         line-height: 1.75;
     }
 
-    .about-content p {
-        font-size: 1.02rem;
-    }
+   .about-content p {
+    font-size: 1.12rem;
+    font-weight: 500;
+    color: #1d3027;
+    text-shadow: none;
+}.about-content {
+    position: relative;
+    z-index: 2;
+}
 
-    .about-lead {
-        font-size: 1.25rem !important;
-    }
+.about-content p,
+.about-content h2,
+.about-content a {
+    text-shadow: none !important;
+}
+
+.about-content > p:not(.about-lead) {
+    font-size: 1.05rem;
+    line-height: 1.85;
+    font-weight: 500;
+    color: #26372f;
 }
