@@ -3409,3 +3409,24 @@ p {
     font-weight: 500;
     color: #26372f;
 }
+
+/* Mobilos beállítások */
+
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.75;
+    }
+
+    .about-content p {
+        font-size: 1.02rem;
+    }
+
+    .about-lead {
+        font-size: 1.25rem !important;
+    }
+}
