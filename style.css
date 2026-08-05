@@ -3985,3 +3985,46 @@ p {
         line-height: 1.55 !important;
     }
 }
+/* Rólam rész – kiegyensúlyozott mobilméret */
+
+@media (max-width: 768px) {
+    .about-section {
+        padding-top: 55px !important;
+        padding-bottom: 55px !important;
+    }
+
+    .about-content {
+        padding: 22px 18px !important;
+    }
+
+    .about-content .section-eyebrow {
+        margin-bottom: 18px !important;
+        font-size: 0.85rem !important;
+    }
+
+    .about-content h2 {
+        font-size: clamp(2.35rem, 9.5vw, 3rem) !important;
+        line-height: 1 !important;
+        letter-spacing: -0.025em !important;
+    }
+
+    .about-content h2 span {
+        margin-top: 7px !important;
+    }
+
+    .about-content p {
+        font-size: 1rem !important;
+        line-height: 1.7 !important;
+        font-weight: 500 !important;
+    }
+
+    .about-content .about-lead {
+        margin-top: 24px !important;
+        font-size: 1.05rem !important;
+        line-height: 1.7 !important;
+    }
+
+    .about-content > p + p {
+        margin-top: 16px !important;
+    }
+}
