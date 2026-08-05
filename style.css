@@ -4150,4 +4150,62 @@ p {
     .main-navigation a:last-child {
         border-bottom: none;
     }
+}/* Időpontfoglalási kártya – olvashatóság és mobil igazítás */
+
+.booking-card .booking-card-label {
+    color: #e8cf91 !important;
+    opacity: 1 !important;
+    font-size: 0.82rem !important;
+    line-height: 1.5 !important;
+    font-weight: 600 !important;
+}
+
+.booking-card h3 {
+    color: #fffdf7 !important;
+    opacity: 1 !important;
+    font-size: 1.75rem !important;
+    line-height: 1.18 !important;
+    font-weight: 600 !important;
+}
+
+.booking-card > p:not(.booking-card-label, .booking-social) {
+    color: rgba(255, 255, 255, 0.92) !important;
+    opacity: 1 !important;
+    font-size: 1rem !important;
+    line-height: 1.7 !important;
+    font-weight: 500 !important;
+}
+
+.booking-card .booking-social {
+    color: rgba(255, 255, 255, 0.9) !important;
+    opacity: 1 !important;
+    font-size: 0.92rem !important;
+}
+
+.booking-card .booking-phone {
+    color: #ffffff !important;
+}
+
+@media (max-width: 700px) {
+    .booking-card {
+        width: 100% !important;
+        padding: 76px 30px 40px !important;
+        border-radius: 80px 80px 24px 24px !important;
+    }
+
+    .booking-card .booking-card-label {
+        margin-bottom: 22px !important;
+    }
+
+    .booking-card h3 {
+        font-size: 1.6rem !important;
+        line-height: 1.2 !important;
+    }
+
+    .booking-card::before {
+        top: 95px !important;
+        right: -100px !important;
+        opacity: 0.65;
+        pointer-events: none;
+    }
 }
