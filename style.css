@@ -3430,4 +3430,42 @@ p {
     .about-lead {
         font-size: 1.25rem !important;
     }
+}/* Rólam rész – nagyobb és jobban olvasható szöveg */
+
+.about-content {
+    background: rgba(250, 247, 239, 0.82);
+    padding: 32px;
+    border-radius: 8px;
+}
+
+.about-content p,
+.about-content .about-lead {
+    color: #17271f !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+    font-weight: 600;
+}
+
+.about-content > p:not(.about-lead) {
+    font-size: 1.2rem !important;
+    line-height: 1.9;
+}
+
+.about-content .about-lead {
+    font-size: 1.32rem !important;
+    line-height: 1.85;
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        padding: 22px 18px;
+    }
+
+    .about-content > p:not(.about-lead) {
+        font-size: 1.1rem !important;
+    }
+
+    .about-content .about-lead {
+        font-size: 1.2rem !important;
+    }
 }
