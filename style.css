@@ -3468,4 +3468,478 @@ p {
     .about-content .about-lead {
         font-size: 1.2rem !important;
     }
+}/* ==================================================
+   NAGYOBB ÉS OLVASHATÓBB BETŰK AZ EGÉSZ OLDALON
+   ================================================== */
+
+body {
+    font-size: 18px !important;
+    color: #1d3027;
+}
+
+/* Fejléc magassága */
+
+.site-header,
+.header-container {
+    min-height: 94px;
+}
+
+/* Logó */
+
+.logo-name {
+    font-size: 1.75rem !important;
+    line-height: 1.1;
+}
+
+.logo-subtitle {
+    font-size: 0.75rem !important;
+    letter-spacing: 0.28em;
+    margin-top: 6px;
+}
+
+/* Felső menüpontok */
+
+.main-navigation a {
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.02em;
+}
+
+/* Fejléc időpontkérés gomb */
+
+.header-button {
+    font-size: 0.95rem !important;
+    padding: 16px 28px !important;
+}
+
+/* Kisebb szakaszcímek */
+
+.section-eyebrow,
+.hero-eyebrow {
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.12em;
+}
+
+/* Általános bekezdések */
+
+p {
+    font-size: 1.08rem;
+    line-height: 1.8;
+}
+
+/* Rólam rész szövegdoboza */
+
+.about-content {
+    background: rgba(252, 249, 242, 0.9) !important;
+    padding: 38px 42px !important;
+    border-radius: 10px;
+    box-shadow: 0 12px 40px rgba(36, 53, 43, 0.08);
+}
+
+/* Rólam rész normál szövege */
+
+.about-content p {
+    color: #17281f !important;
+    opacity: 1 !important;
+    font-size: 1.18rem !important;
+    line-height: 1.85 !important;
+    font-weight: 500 !important;
+    text-shadow: none !important;
+}
+
+/* Rólam rész első kiemelt bekezdése */
+
+.about-content .about-lead {
+    font-size: 1.32rem !important;
+    line-height: 1.75 !important;
+    font-weight: 500 !important;
+}
+
+/* Szolgáltatások, árlista, galéria és kapcsolat szövegei */
+
+.service-card p,
+.services-heading > p,
+.price-heading > p,
+.gallery-heading > p,
+.reviews-heading > p,
+.contact-heading > p,
+.booking-card p,
+.contact-booking p,
+.contact-detail p {
+    font-size: 1.05rem !important;
+    line-height: 1.75 !important;
+}
+
+/* Kártyacímek */
+
+.service-card h3,
+.price-item h3,
+.booking-card h3,
+.contact-detail h3,
+.contact-booking h3 {
+    font-size: 1.35rem !important;
+}
+
+/* Vélemények */
+
+.review-card blockquote {
+    font-size: 1.12rem !important;
+    line-height: 1.75 !important;
+}
+
+/* Gombok és szöveges hivatkozások */
+
+.primary-button,
+.secondary-button,
+.text-link,
+.service-card a,
+.reviews-link {
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+}
+
+/* Mobiltelefon */
+
+@media (max-width: 768px) {
+    body {
+        font-size: 17px !important;
+    }
+
+    .site-header,
+    .header-container {
+        min-height: 76px;
+    }
+
+    .logo-name {
+        font-size: 1.45rem !important;
+    }
+
+    .about-content {
+        padding: 26px 20px !important;
+    }
+
+    .about-content p {
+        font-size: 1.08rem !important;
+    }
+
+    .about-content .about-lead {
+        font-size: 1.2rem !important;
+    }
+}/* ==================================================
+   NAGYOBB ÉS OLVASHATÓBB BETŰK AZ EGÉSZ OLDALON
+   ================================================== */
+
+body {
+    font-size: 18px !important;
+    color: #1d3027;
+}
+
+/* Fejléc magassága */
+
+.site-header,
+.header-container {
+    min-height: 94px;
+}
+
+/* Logó */
+
+.logo-name {
+    font-size: 1.75rem !important;
+    line-height: 1.1;
+}
+
+.logo-subtitle {
+    font-size: 0.75rem !important;
+    letter-spacing: 0.28em;
+    margin-top: 6px;
+}
+
+/* Felső menüpontok */
+
+.main-navigation a {
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.02em;
+}
+
+/* Fejléc időpontkérés gomb */
+
+.header-button {
+    font-size: 0.95rem !important;
+    padding: 16px 28px !important;
+}
+
+/* Kisebb szakaszcímek */
+
+.section-eyebrow,
+.hero-eyebrow {
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.12em;
+}
+
+/* Általános bekezdések */
+
+p {
+    font-size: 1.08rem;
+    line-height: 1.8;
+}
+
+/* Rólam rész szövegdoboza */
+
+.about-content {
+    background: rgba(252, 249, 242, 0.9) !important;
+    padding: 38px 42px !important;
+    border-radius: 10px;
+    box-shadow: 0 12px 40px rgba(36, 53, 43, 0.08);
+}
+
+/* Rólam rész normál szövege */
+
+.about-content p {
+    color: #17281f !important;
+    opacity: 1 !important;
+    font-size: 1.18rem !important;
+    line-height: 1.85 !important;
+    font-weight: 500 !important;
+    text-shadow: none !important;
+}
+
+/* Rólam rész első kiemelt bekezdése */
+
+.about-content .about-lead {
+    font-size: 1.32rem !important;
+    line-height: 1.75 !important;
+    font-weight: 500 !important;
+}
+
+/* Szolgáltatások, árlista, galéria és kapcsolat szövegei */
+
+.service-card p,
+.services-heading > p,
+.price-heading > p,
+.gallery-heading > p,
+.reviews-heading > p,
+.contact-heading > p,
+.booking-card p,
+.contact-booking p,
+.contact-detail p {
+    font-size: 1.05rem !important;
+    line-height: 1.75 !important;
+}
+
+/* Kártyacímek */
+
+.service-card h3,
+.price-item h3,
+.booking-card h3,
+.contact-detail h3,
+.contact-booking h3 {
+    font-size: 1.35rem !important;
+}
+
+/* Vélemények */
+
+.review-card blockquote {
+    font-size: 1.12rem !important;
+    line-height: 1.75 !important;
+}
+
+/* Gombok és szöveges hivatkozások */
+
+.primary-button,
+.secondary-button,
+.text-link,
+.service-card a,
+.reviews-link {
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+}
+
+/* Mobiltelefon */
+
+@media (max-width: 768px) {
+    body {
+        font-size: 17px !important;
+    }
+
+    .site-header,
+    .header-container {
+        min-height: 76px;
+    }
+
+    .logo-name {
+        font-size: 1.45rem !important;
+    }
+
+    .about-content {
+        padding: 26px 20px !important;
+    }
+
+    .about-content p {
+        font-size: 1.08rem !important;
+    }
+
+    .about-content .about-lead {
+        font-size: 1.2rem !important;
+    }
+}/* ==================================================
+   NAGYOBB ÉS OLVASHATÓBB BETŰK AZ EGÉSZ OLDALON
+   ================================================== */
+
+body {
+    font-size: 18px !important;
+    color: #1d3027;
+}
+
+/* Fejléc magassága */
+
+.site-header,
+.header-container {
+    min-height: 94px;
+}
+
+/* Logó */
+
+.logo-name {
+    font-size: 1.75rem !important;
+    line-height: 1.1;
+}
+
+.logo-subtitle {
+    font-size: 0.75rem !important;
+    letter-spacing: 0.28em;
+    margin-top: 6px;
+}
+
+/* Felső menüpontok */
+
+.main-navigation a {
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.02em;
+}
+
+/* Fejléc időpontkérés gomb */
+
+.header-button {
+    font-size: 0.95rem !important;
+    padding: 16px 28px !important;
+}
+
+/* Kisebb szakaszcímek */
+
+.section-eyebrow,
+.hero-eyebrow {
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.12em;
+}
+
+/* Általános bekezdések */
+
+p {
+    font-size: 1.08rem;
+    line-height: 1.8;
+}
+
+/* Rólam rész szövegdoboza */
+
+.about-content {
+    background: rgba(252, 249, 242, 0.9) !important;
+    padding: 38px 42px !important;
+    border-radius: 10px;
+    box-shadow: 0 12px 40px rgba(36, 53, 43, 0.08);
+}
+
+/* Rólam rész normál szövege */
+
+.about-content p {
+    color: #17281f !important;
+    opacity: 1 !important;
+    font-size: 1.18rem !important;
+    line-height: 1.85 !important;
+    font-weight: 500 !important;
+    text-shadow: none !important;
+}
+
+/* Rólam rész első kiemelt bekezdése */
+
+.about-content .about-lead {
+    font-size: 1.32rem !important;
+    line-height: 1.75 !important;
+    font-weight: 500 !important;
+}
+
+/* Szolgáltatások, árlista, galéria és kapcsolat szövegei */
+
+.service-card p,
+.services-heading > p,
+.price-heading > p,
+.gallery-heading > p,
+.reviews-heading > p,
+.contact-heading > p,
+.booking-card p,
+.contact-booking p,
+.contact-detail p {
+    font-size: 1.05rem !important;
+    line-height: 1.75 !important;
+}
+
+/* Kártyacímek */
+
+.service-card h3,
+.price-item h3,
+.booking-card h3,
+.contact-detail h3,
+.contact-booking h3 {
+    font-size: 1.35rem !important;
+}
+
+/* Vélemények */
+
+.review-card blockquote {
+    font-size: 1.12rem !important;
+    line-height: 1.75 !important;
+}
+
+/* Gombok és szöveges hivatkozások */
+
+.primary-button,
+.secondary-button,
+.text-link,
+.service-card a,
+.reviews-link {
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+}
+
+/* Mobiltelefon */
+
+@media (max-width: 768px) {
+    body {
+        font-size: 17px !important;
+    }
+
+    .site-header,
+    .header-container {
+        min-height: 76px;
+    }
+
+    .logo-name {
+        font-size: 1.45rem !important;
+    }
+
+    .about-content {
+        padding: 26px 20px !important;
+    }
+
+    .about-content p {
+        font-size: 1.08rem !important;
+    }
+
+    .about-content .about-lead {
+        font-size: 1.2rem !important;
+    }
 }
