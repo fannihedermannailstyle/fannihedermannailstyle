@@ -4297,19 +4297,36 @@ p {
         object-fit: cover;
         border-radius: 10px;
     }
-}/* Képes fejléc-logó */
+/* Képes fejléc-logó */
+
+.logo {
+    width: 230px;
+    height: 78px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
 
 .site-logo-image {
     display: block;
-    width: 180px;
-    max-height: 72px;
+    width: 230px;
     height: auto;
-    object-fit: contain;
+    transform: scale(1.65);
+    transform-origin: center;
 }
 
 @media (max-width: 768px) {
-    .site-logo-image {
-        width: 145px;
-        max-height: 58px;
+    .logo {
+        width: 180px;
+        height: 62px;
     }
+
+    .site-logo-image {
+        width: 180px;
+        transform: scale(1.65);
+        transform: scale(1.65);
+    }
+}
+
 }
