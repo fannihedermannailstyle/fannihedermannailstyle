@@ -3391,8 +3391,11 @@ p {
     font-size: 1.12rem;
     font-weight: 500;
     color: #1d3027;
-    text-shadow: none;
-}.about-content {
+            text-shadow: none;
+    }
+}
+
+.about-content {
     position: relative;
     z-index: 2;
 }
