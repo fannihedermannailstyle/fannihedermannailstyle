@@ -4209,3 +4209,60 @@ p {
         pointer-events: none;
     }
 }
+/* Kapcsolatfoglalási kártya – jobb olvashatóság */
+
+.contact-booking .contact-booking-label {
+    color: #e8cf91 !important;
+    opacity: 1 !important;
+    font-size: 0.85rem !important;
+    font-weight: 600 !important;
+    line-height: 1.5 !important;
+}
+
+.contact-booking h3 {
+    color: #fffdf7 !important;
+    opacity: 1 !important;
+    font-size: 1.75rem !important;
+    font-weight: 600 !important;
+    line-height: 1.25 !important;
+}
+
+.contact-booking > p:not(.contact-booking-label) {
+    color: rgba(255, 255, 255, 0.92) !important;
+    opacity: 1 !important;
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    line-height: 1.7 !important;
+}
+
+.contact-booking .primary-button {
+    color: #173b2f !important;
+}
+
+.contact-booking .secondary-button {
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.55) !important;
+}
+
+.contact-booking::before {
+    opacity: 0.5 !important;
+    pointer-events: none;
+}
+
+@media (max-width: 700px) {
+    .contact-booking {
+        padding: 58px 24px 36px !important;
+    }
+
+    .contact-booking .contact-booking-label {
+        margin-bottom: 20px !important;
+    }
+
+    .contact-booking h3 {
+        font-size: 1.5rem !important;
+    }
+
+    .contact-booking > p:not(.contact-booking-label) {
+        font-size: 1rem !important;
+    }
+}
