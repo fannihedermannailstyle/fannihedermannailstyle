@@ -936,10 +936,9 @@ button {
 }
 
 .service-number {
-    color: var(--color-gold);
-    font-family: var(--font-heading);
-    font-size: 1.05rem;
-    letter-spacing: 0.12em;
+    width: 48px !important;
+    height: 48px !important;
+    background-size: 155% auto !important;
 }
 
 .service-card h3 {
@@ -1187,17 +1186,12 @@ button {
     border-top: 1px solid rgba(194, 154, 85, 0.32);
 }
 
-.price-item {
-    min-height: 96px;
-    padding: 22px 4px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 35px;
-    border-bottom: 1px solid rgba(194, 154, 85, 0.24);
-    transition:
-        padding var(--transition),
-        background-color var(--transition);
+.price-item > div > span {
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    flex-basis: 36px !important;
+    background-size: 160% auto !important;
 }
 
 .price-item:hover {
@@ -1349,9 +1343,6 @@ button {
 /* Árlista – mobil */
 
 @media (max-width: 700px) {
-    .price-section {
-        padding: 80px 0;
-    }
 
     .price-container {
         width: min(calc(100% - 32px), var(--container-width));
@@ -1394,6 +1385,7 @@ button {
         border-radius: 140px 140px 24px 24px;
     }
 }
+
 /* Fotószerű botanikus háttér a nyitó szakaszhoz */
 
 .hero::after {
@@ -4460,128 +4452,67 @@ p {
     font-size: 16px !important;
     line-height: 1.6 !important;
   }
-}/* =========================================
+}
+
+/* =========================================
    KÖRMÖS MOTÍVUM A SORSZÁMOK HELYETT
    ========================================= */
 
-/* A számok vizuális elrejtése és a motívum megjelenítése */
+/* A sorszámok elrejtése és a motívum megjelenítése */
 .service-number,
 .price-item > div > span {
     display: block;
     flex-shrink: 0;
-
     color: transparent !important;
     font-size: 0 !important;
     line-height: 0 !important;
     letter-spacing: 0 !important;
-
-    background-image: url("./images/kormos-motivum.webp?v=1");
+    background-image: url("./images/kormos-motivum.webp?v=2");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
-}
-
-/* Szolgáltatáskártyák motívuma */
-.service-number {
-    width: 40px;
-    height: 40px;
-}
-
-/* Kisebb térköz a motívum és a szolgáltatás neve között */
-.service-card h3 {
-    margin-top: 48px;
-}
-
-/* Árlista motívuma */
-.price-item > div > span {
-    width: 30px;
-    height: 30px;
-    flex-basis: 30px;
-}
-
-.price-item > div {
-    gap: 20px;
-}
-
-/* Árlista árainak enyhe nagyítása */
-.price-item strong {
-    font-size: clamp(1.08rem, 1.35vw, 1.25rem);
-    font-weight: 700;
-    letter-spacing: 0.02em;
-}
-
-
-/* =========================================
-   TELEFONOS MÉRETEK
-   ========================================= */
-
-@media (max-width: 700px) {
-
-    .service-number {
-        width: 34px;
-        height: 34px;
-    }
-
-    .service-card h3 {
-        margin-top: 38px;
-    }
-
-    .price-item > div > span {
-        width: 28px;
-        height: 28px;
-        flex-basis: 28px;
-    }
-
-    .price-item > div {
-        gap: 14px;
-    }
-
-    .price-item strong {
-        padding-left: 42px;
-        font-size: 1.15rem;
-    }
-}/* Körmös motívumok nagyítása és erősítése */
-
-.service-number {
-    width: 58px !important;
-    height: 58px !important;
-    background-size: 175% auto !important;
-    background-position: center !important;
     opacity: 1 !important;
-    filter: contrast(1.5) saturate(1.25);
+    filter:
+        brightness(0.78)
+        contrast(1.25)
+        saturate(0.9) !important;
 }
 
-/* A cím ne kerüljön túl messze a motívumtól */
+/* Motívum a szolgáltatáskártyákon */
+.service-number {
+    width: 48px !important;
+    height: 48px !important;
+    background-size: 155% auto !important;
+}
+
 .service-card h3 {
     margin-top: 38px !important;
 }
 
-
-/* Árlista melletti motívumok */
+/* Motívum és nagyobb árak az árlistán */
 .price-item > div > span {
-    width: 42px !important;
-    height: 42px !important;
-    min-width: 42px !important;
-    flex-basis: 42px !important;
-
-    background-size: 175% auto !important;
-    background-position: center !important;
-    opacity: 1 !important;
-    filter: contrast(1.5) saturate(1.25);
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    flex-basis: 36px !important;
+    background-size: 160% auto !important;
 }
 
 .price-item > div {
     gap: 18px !important;
 }
 
+.price-item strong {
+    font-size: clamp(1.08rem, 1.35vw, 1.25rem);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
 
 /* Telefon */
 @media (max-width: 700px) {
-
     .service-number {
-        width: 50px !important;
-        height: 50px !important;
-        background-size: 180% auto !important;
+        width: 42px !important;
+        height: 42px !important;
+        background-size: 160% auto !important;
     }
 
     .service-card h3 {
@@ -4589,32 +4520,19 @@ p {
     }
 
     .price-item > div > span {
-        width: 38px !important;
-        height: 38px !important;
-        min-width: 38px !important;
-        flex-basis: 38px !important;
-        background-size: 185% auto !important;
+        width: 32px !important;
+        height: 32px !important;
+        min-width: 32px !important;
+        flex-basis: 32px !important;
+        background-size: 165% auto !important;
     }
 
     .price-item > div {
         gap: 14px !important;
     }
-}
 
-/* Körmös motívum vastagítása */
-.service-number,
-.price-item > div > span {
-    opacity: 1 !important;
-
-    filter:
-        drop-shadow(0.7px 0 0 #c88d32)
-        drop-shadow(-0.7px 0 0 #c88d32)
-        drop-shadow(0 0.7px 0 #c88d32)
-        drop-shadow(0 -0.7px 0 #c88d32)
-        drop-shadow(0.5px 0.5px 0 #c88d32)
-        drop-shadow(-0.5px 0.5px 0 #c88d32)
-        drop-shadow(0.5px -0.5px 0 #c88d32)
-        drop-shadow(-0.5px -0.5px 0 #c88d32)
-        contrast(1.15)
-        saturate(1.1) !important;
+    .price-item strong {
+        padding-left: 42px;
+        font-size: 1.15rem;
+    }
 }
