@@ -4460,4 +4460,84 @@ p {
     font-size: 16px !important;
     line-height: 1.6 !important;
   }
+}/* =========================================
+   KÖRMÖS MOTÍVUM A SORSZÁMOK HELYETT
+   ========================================= */
+
+/* A számok vizuális elrejtése és a motívum megjelenítése */
+.service-number,
+.price-item > div > span {
+    display: block;
+    flex-shrink: 0;
+
+    color: transparent !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+    letter-spacing: 0 !important;
+
+    background-image: url("./images/kormos-motivum.webp?v=1");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+/* Szolgáltatáskártyák motívuma */
+.service-number {
+    width: 40px;
+    height: 40px;
+}
+
+/* Kisebb térköz a motívum és a szolgáltatás neve között */
+.service-card h3 {
+    margin-top: 48px;
+}
+
+/* Árlista motívuma */
+.price-item > div > span {
+    width: 30px;
+    height: 30px;
+    flex-basis: 30px;
+}
+
+.price-item > div {
+    gap: 20px;
+}
+
+/* Árlista árainak enyhe nagyítása */
+.price-item strong {
+    font-size: clamp(1.08rem, 1.35vw, 1.25rem);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+
+/* =========================================
+   TELEFONOS MÉRETEK
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    .service-number {
+        width: 34px;
+        height: 34px;
+    }
+
+    .service-card h3 {
+        margin-top: 38px;
+    }
+
+    .price-item > div > span {
+        width: 28px;
+        height: 28px;
+        flex-basis: 28px;
+    }
+
+    .price-item > div {
+        gap: 14px;
+    }
+
+    .price-item strong {
+        padding-left: 42px;
+        font-size: 1.15rem;
+    }
 }
