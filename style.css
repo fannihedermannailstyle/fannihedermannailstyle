@@ -4575,19 +4575,28 @@ p {
         font-size: 1.15rem;
     }
 }
-/* Asztali motívum – eredeti vonalvastagság, erősebb szín */
+/* Asztali motívum – megfelelő méret és finom vonal */
 @media (min-width: 701px) {
     .service-number,
     .price-item > div > span {
-        background-image: url("./images/kormos-motivum.webp?v=6") !important;
+        background-image: url("./images/kormos-motivum.webp?v=7") !important;
         background-position: center !important;
         background-repeat: no-repeat !important;
+        opacity: 1 !important;
 
         filter:
-            brightness(0.55)
+            brightness(0.58)
             contrast(1.45)
-            saturate(1.2) !important;
+            saturate(1.15) !important;
+    }
 
-        opacity: 1 !important;
+    /* Szolgáltatáskártyák */
+    .service-number {
+        background-size: 200% auto !important;
+    }
+
+    /* Árlista */
+    .price-item > div > span {
+        background-size: 190% auto !important;
     }
 }
