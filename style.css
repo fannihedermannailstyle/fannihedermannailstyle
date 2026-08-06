@@ -4540,4 +4540,63 @@ p {
         padding-left: 42px;
         font-size: 1.15rem;
     }
+}/* Körmös motívumok nagyítása és erősítése */
+
+.service-number {
+    width: 58px !important;
+    height: 58px !important;
+    background-size: 175% auto !important;
+    background-position: center !important;
+    opacity: 1 !important;
+    filter: contrast(1.5) saturate(1.25);
+}
+
+/* A cím ne kerüljön túl messze a motívumtól */
+.service-card h3 {
+    margin-top: 38px !important;
+}
+
+
+/* Árlista melletti motívumok */
+.price-item > div > span {
+    width: 42px !important;
+    height: 42px !important;
+    min-width: 42px !important;
+    flex-basis: 42px !important;
+
+    background-size: 175% auto !important;
+    background-position: center !important;
+    opacity: 1 !important;
+    filter: contrast(1.5) saturate(1.25);
+}
+
+.price-item > div {
+    gap: 18px !important;
+}
+
+
+/* Telefon */
+@media (max-width: 700px) {
+
+    .service-number {
+        width: 50px !important;
+        height: 50px !important;
+        background-size: 180% auto !important;
+    }
+
+    .service-card h3 {
+        margin-top: 30px !important;
+    }
+
+    .price-item > div > span {
+        width: 38px !important;
+        height: 38px !important;
+        min-width: 38px !important;
+        flex-basis: 38px !important;
+        background-size: 185% auto !important;
+    }
+
+    .price-item > div {
+        gap: 14px !important;
+    }
 }
