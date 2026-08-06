@@ -4517,14 +4517,20 @@ p {
     letter-spacing: 0.02em;
 }
 
-/* Slightly stronger motif on larger screens only */
+/* Határozottabb motívum kizárólag gépi nézeten */
 @media (min-width: 701px) {
     .service-number,
     .price-item > div > span {
         filter:
-            brightness(0.72)
-            contrast(1.5)
-            saturate(1.1) !important;
+            drop-shadow(0.3px 0 0 #ad6b0b)
+            drop-shadow(-0.3px 0 0 #ad6b0b)
+            drop-shadow(0 0.3px 0 #ad6b0b)
+            drop-shadow(0 -0.3px 0 #ad6b0b)
+            brightness(0.7)
+            contrast(1.35)
+            saturate(1.15) !important;
+
+        opacity: 1 !important;
     }
 }
 
