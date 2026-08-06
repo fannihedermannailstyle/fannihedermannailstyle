@@ -4393,4 +4393,24 @@ p {
     padding-top: 5px !important;
     padding-bottom: 5px !important;
   }
+}/* Gép */
+.site-header .logo {
+  width: 140px !important;
+  flex: 0 0 140px !important;
+}
+
+.site-header .logo .site-logo-image {
+  max-height: 110px !important;
+}
+
+/* Telefon */
+@media (max-width: 768px) {
+  .site-header .logo {
+    width: 80px !important;
+    flex: 0 0 80px !important;
+  }
+
+  .site-header .logo .site-logo-image {
+    max-height: 70px !important;
+  }
 }
