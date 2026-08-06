@@ -4570,3 +4570,18 @@ p {
         font-size: 1.15rem;
     }
 }
+/* Gépi nézet: új, vastagabb motívum */
+@media (min-width: 701px) {
+    .service-number,
+    .price-item > div > span {
+        background-image: url("./images/logo_transparent.webp?v=1") !important;
+    }
+}
+
+/* Telefonos nézet: korábbi motívum */
+@media (max-width: 700px) {
+    .service-number,
+    .price-item > div > span {
+        background-image: url("./images/kormos-motivum.webp?v=1") !important;
+    }
+}
