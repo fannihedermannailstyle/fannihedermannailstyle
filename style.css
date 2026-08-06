@@ -4613,3 +4613,23 @@ p {
         background-size: 265% auto !important;
     }
 }
+/* Ismerj meg kártya – asztali nézet */
+
+@media (min-width: 769px) {
+    .about-content {
+        padding: 46px 50px 42px !important;
+    }
+
+    .about-content p {
+        max-width: 44ch;
+    }
+
+    .about-content .text-link {
+        margin-top: 28px !important;
+    }
+
+    .about-content .text-link::after {
+        content: none !important;
+        display: none !important;
+    }
+}
