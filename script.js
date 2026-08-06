@@ -203,7 +203,7 @@ renderGallery();
                 link.target = "_blank";
                 link.rel = "noopener noreferrer";
 
-                image.src = `./images/${fileName}`;
+                image.src = `./images/thumbs/${fileName}`;
                 image.alt =
                     `Fanni Hederman Nailstyle körömmunka ${
                         start + index + 1
