@@ -4461,7 +4461,7 @@ p {
 }
 
 /* =========================================
-   NAIL MOTIF IN PLACE OF NUMBERS
+   KÖRMÖS MOTÍVUM – VÉGLEGES, TISZTA BEÁLLÍTÁS
    ========================================= */
 
 .service-number,
@@ -4472,24 +4472,19 @@ p {
     font-size: 0 !important;
     line-height: 0 !important;
     letter-spacing: 0 !important;
-    background-image: url("./images/kormos-motivum.webp?v=2");
-    background-repeat: no-repeat;
-    background-position: center;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
     opacity: 1 !important;
 }
 
-/* Service cards */
-.service-number {
-    width: 48px !important;
-    height: 48px !important;
-    background-size: 155% auto !important;
+/* Az árlista soros elrendezése */
+.price-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
 }
 
-.service-card h3 {
-    margin-top: 38px !important;
-}
-
-/* Price list layout and motif */
 .price-item > div {
     min-width: 0;
     display: flex;
@@ -4497,51 +4492,52 @@ p {
     gap: 18px !important;
 }
 
-.price-item > div > span {
-    width: 36px !important;
-    height: 36px !important;
-    min-width: 36px !important;
-    flex-basis: 36px !important;
-    background-size: 160% auto !important;
-}
-
 .price-item h3 {
     min-width: 0;
 }
 
 .price-item strong {
+    flex: 0 0 auto;
     margin-left: auto;
-    padding-left: 0;
+    padding-left: 18px;
     font-size: clamp(1.08rem, 1.35vw, 1.25rem);
     font-weight: 700;
     letter-spacing: 0.02em;
+    white-space: nowrap;
 }
 
-/* Határozottabb motívum kizárólag gépi nézeten */
+/* Gépi nézet: külön, kivágott és enyhén vastagított képfájl */
 @media (min-width: 701px) {
     .service-number,
     .price-item > div > span {
-        filter:
-            drop-shadow(0.3px 0 0 #ad6b0b)
-            drop-shadow(-0.3px 0 0 #ad6b0b)
-            drop-shadow(0 0.3px 0 #ad6b0b)
-            drop-shadow(0 -0.3px 0 #ad6b0b)
-            brightness(0.7)
-            contrast(1.35)
-            saturate(1.15) !important;
+        background-image: url("./images/kormos-motivum-desktop.webp?v=1") !important;
+        background-size: contain !important;
+        filter: none !important;
+    }
 
-        opacity: 1 !important;
+    .service-number {
+        width: 48px !important;
+        height: 48px !important;
+    }
+
+    .service-card h3 {
+        margin-top: 38px !important;
+    }
+
+    .price-item > div > span {
+        width: 36px !important;
+        height: 36px !important;
+        min-width: 36px !important;
+        flex-basis: 36px !important;
     }
 }
 
-/* Phone */
+/* Telefon: a korábbi, bevált motívum és méretezés */
 @media (max-width: 700px) {
     .service-number,
     .price-item > div > span {
-        filter:
-            brightness(0.78)
-            contrast(1.25)
-            saturate(0.9) !important;
+        background-image: url("./images/kormos-motivum.webp?v=5") !important;
+        filter: none !important;
     }
 
     .service-number {
@@ -4554,6 +4550,17 @@ p {
         margin-top: 30px !important;
     }
 
+    .price-item {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .price-item > div {
+        align-items: flex-start;
+        gap: 14px !important;
+    }
+
     .price-item > div > span {
         width: 32px !important;
         height: 32px !important;
@@ -4562,70 +4569,9 @@ p {
         background-size: 165% auto !important;
     }
 
-    .price-item > div {
-        gap: 14px !important;
-    }
-
     .price-item strong {
         margin-left: 0;
         padding-left: 46px !important;
         font-size: 1.15rem;
-    }
-}
-/* Gépi nézet: régi, letisztult motívum */
-@media (min-width: 701px) {
-    .service-number,
-    .price-item > div > span {
-        background-image: url("./images/kormos-motivum.webp?v=3") !important;
-        background-size: 175% auto !important;
-        background-position: center !important;
-        background-repeat: no-repeat !important;
-
-        filter:
-            brightness(0.82)
-            contrast(1.35)
-            saturate(1.05) !important;
-
-        opacity: 1 !important;
-    }
-
-    .service-number {
-        width: 48px !important;
-        height: 48px !important;
-    }
-
-    .price-item > div > span {
-        width: 36px !important;
-        height: 36px !important;
-        min-width: 36px !important;
-        flex-basis: 36px !important;
-    }
-}
-
-/* Telefon: a jelenlegi, jól működő beállítás */
-@media (max-width: 700px) {
-    .service-number,
-    .price-item > div > span {
-        background-image: url("./images/kormos-motivum.webp?v=3") !important;
-        filter: none !important;
-        opacity: 1 !important;
-    }
-}
-/* VÉGLEGES asztali körmös motívum */
-@media (min-width: 701px) {
-    .service-number,
-    .price-item > div > span {
-        background-image: url("./images/kormos-motivum.webp?v=4") !important;
-
-        filter:
-            drop-shadow(0.5px 0 0 #9f6415)
-            drop-shadow(-0.5px 0 0 #9f6415)
-            drop-shadow(0 0.5px 0 #9f6415)
-            drop-shadow(0 -0.5px 0 #9f6415)
-            brightness(0.65)
-            contrast(1.5)
-            saturate(1.15) !important;
-
-        opacity: 1 !important;
     }
 }
