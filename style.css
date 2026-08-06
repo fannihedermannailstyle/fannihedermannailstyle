@@ -4600,3 +4600,16 @@ p {
         background-size: 190% auto !important;
     }
 }
+/* Asztali motívumméretek végleges összehangolása */
+@media (min-width: 701px) {
+
+    /* Szolgáltatáskártyák – ez már jó */
+    .service-number {
+        background-size: 200% auto !important;
+    }
+
+    /* Árlista – nagyobb nagyítás a kisebb tartóelem miatt */
+    .price-item > div > span {
+        background-size: 265% auto !important;
+    }
+}
