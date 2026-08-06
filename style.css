@@ -4522,13 +4522,9 @@ p {
     .service-number,
     .price-item > div > span {
         filter:
-            drop-shadow(0.4px 0 0 #c88d32)
-            drop-shadow(-0.4px 0 0 #c88d32)
-            drop-shadow(0 0.4px 0 #c88d32)
-            drop-shadow(0 -0.4px 0 #c88d32)
-            brightness(0.82)
-            contrast(1.2)
-            saturate(0.95) !important;
+            brightness(0.72)
+            contrast(1.5)
+            saturate(1.1) !important;
     }
 }
 
