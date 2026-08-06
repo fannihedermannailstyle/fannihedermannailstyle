@@ -4352,4 +4352,45 @@ p {
     padding-top: 8px;
     padding-bottom: 8px;
   }
+}/* Logó mérete gépen */
+.site-header .logo {
+  display: block !important;
+  width: 170px !important;
+  flex: 0 0 170px !important;
+  line-height: 0 !important;
+  overflow: visible !important;
+}
+
+.site-header .logo .site-logo-image {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  max-height: 135px !important;
+  object-fit: contain !important;
+}
+
+/* Fejléc magasságának csökkentése */
+.site-header .header-container {
+  min-height: 0 !important;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+}
+
+/* Logó mérete telefonon */
+@media (max-width: 768px) {
+  .site-header .logo {
+    width: 100px !important;
+    flex: 0 0 100px !important;
+  }
+
+  .site-header .logo .site-logo-image {
+    width: 100% !important;
+    max-height: 85px !important;
+  }
+
+  .site-header .header-container {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+  }
 }
