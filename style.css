@@ -4611,3 +4611,21 @@ p {
         opacity: 1 !important;
     }
 }
+/* VÉGLEGES asztali körmös motívum */
+@media (min-width: 701px) {
+    .service-number,
+    .price-item > div > span {
+        background-image: url("./images/kormos-motivum.webp?v=4") !important;
+
+        filter:
+            drop-shadow(0.5px 0 0 #9f6415)
+            drop-shadow(-0.5px 0 0 #9f6415)
+            drop-shadow(0 0.5px 0 #9f6415)
+            drop-shadow(0 -0.5px 0 #9f6415)
+            brightness(0.65)
+            contrast(1.5)
+            saturate(1.15) !important;
+
+        opacity: 1 !important;
+    }
+}
