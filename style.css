@@ -4575,3 +4575,19 @@ p {
         font-size: 1.15rem;
     }
 }
+/* Asztali motívum – eredeti vonalvastagság, erősebb szín */
+@media (min-width: 701px) {
+    .service-number,
+    .price-item > div > span {
+        background-image: url("./images/kormos-motivum.webp?v=6") !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+
+        filter:
+            brightness(0.55)
+            contrast(1.45)
+            saturate(1.2) !important;
+
+        opacity: 1 !important;
+    }
+}
