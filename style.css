@@ -4570,18 +4570,42 @@ p {
         font-size: 1.15rem;
     }
 }
-/* Gépi nézet: új, vastagabb motívum */
+/* Gépi nézet: régi, letisztult motívum */
 @media (min-width: 701px) {
     .service-number,
     .price-item > div > span {
-        background-image: url("./images/logo_transparent.webp?v=1") !important;
+        background-image: url("./images/kormos-motivum.webp?v=3") !important;
+        background-size: 175% auto !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+
+        filter:
+            brightness(0.82)
+            contrast(1.35)
+            saturate(1.05) !important;
+
+        opacity: 1 !important;
+    }
+
+    .service-number {
+        width: 48px !important;
+        height: 48px !important;
+    }
+
+    .price-item > div > span {
+        width: 36px !important;
+        height: 36px !important;
+        min-width: 36px !important;
+        flex-basis: 36px !important;
     }
 }
 
-/* Telefonos nézet: korábbi motívum */
+/* Telefon: a jelenlegi, jól működő beállítás */
 @media (max-width: 700px) {
     .service-number,
     .price-item > div > span {
-        background-image: url("./images/kormos-motivum.webp?v=1") !important;
+        background-image: url("./images/kormos-motivum.webp?v=3") !important;
+        filter: none !important;
+        opacity: 1 !important;
     }
 }
