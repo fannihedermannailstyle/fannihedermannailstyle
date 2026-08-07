@@ -4635,4 +4635,52 @@ p {
         height: 0 !important;
         background: none !important;
     }
+/* ISMERJ MEG – kompaktabb doboz */
+
+#rolam .about-content {
+    padding: 26px 32px;
+}
+
+#rolam .about-content h2 {
+    font-size: clamp(2.1rem, 3.2vw, 3.2rem);
+    line-height: 1.05;
+    margin-bottom: 16px;
+}
+
+#rolam .about-content p {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    margin-bottom: 10px;
+}
+
+#rolam .about-content .eyebrow,
+#rolam .about-content .section-label {
+    margin-bottom: 10px;
+}
+
+#rolam .about-content .text-link {
+    margin-top: 8px;
+}
+
+/* Mobil */
+@media (max-width: 768px) {
+    #rolam .about-content {
+        padding: 20px 20px;
+    }
+
+    #rolam .about-content h2 {
+        font-size: 2rem;
+        line-height: 1.08;
+        margin-bottom: 14px;
+    }
+
+    #rolam .about-content p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-bottom: 9px;
+    }
+
+    #rolam .about-content .text-link {
+        margin-top: 6px;
+    }
 }
