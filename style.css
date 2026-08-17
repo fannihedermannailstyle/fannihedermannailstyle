@@ -4743,8 +4743,8 @@ p {
 
 /* Vélemény szövege */
 .review-card blockquote {
-  font-size: clamp(1.9rem, 2.5vw, 2.35rem);
-  line-height: 1.42;
+  font-size: 24px !important;
+  line-height: 1.55;
 }
 
 /* Csillagok */
@@ -4790,9 +4790,9 @@ p {
 /* Mobil */
 @media (max-width: 768px) {
   .review-card blockquote {
-    font-size: 1.35rem;
-    line-height: 1.45;
-  }
+  font-size: 19px !important;
+  line-height: 1.55;
+}
 
   .review-stars {
     font-size: 0.9rem;
