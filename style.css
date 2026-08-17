@@ -4817,4 +4817,22 @@ p {
   .reviews-all-links {
     gap: 14px 24px;
   }
+.map-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 10px 16px;
+  border: 1px solid rgba(181, 143, 72, 0.45);
+  border-radius: 999px;
+  color: #174c3c;
+  background: rgba(255, 255, 255, 0.55);
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.map-link:hover {
+  transform: translateY(-2px);
+  background: rgba(181, 143, 72, 0.12);
 }
