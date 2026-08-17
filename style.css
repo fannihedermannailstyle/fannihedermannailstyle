@@ -4817,6 +4817,8 @@ p {
   .reviews-all-links {
     gap: 14px 24px;
   }
+} /* ez zárja a @media blokkot */
+
 .map-link {
   display: inline-flex;
   align-items: center;
@@ -4835,5 +4837,4 @@ p {
 .map-link:hover {
   transform: translateY(-2px);
   background: rgba(181, 143, 72, 0.12);
-}
 }
