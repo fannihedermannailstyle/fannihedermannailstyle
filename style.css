@@ -4690,3 +4690,131 @@ p {
         margin-top: 6px;
     }
 }
+/* ===== VÉLEMÉNYEK – nagyobb szöveg + Facebook / Google ===== */
+
+.reviews-all {
+  margin-top: 42px;
+}
+
+.reviews-all-title {
+  margin: 0 0 16px;
+  font-size: 1.15rem;
+  line-height: 1.4;
+  font-weight: 600;
+  color: var(--color-green-dark);
+  letter-spacing: 0.02em;
+}
+
+.reviews-all-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px 32px;
+}
+
+.reviews-all .reviews-link {
+  margin-top: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  gap: 10px;
+}
+
+/* Mobil */
+@media (max-width: 768px) {
+  .reviews-all {
+    margin-top: 32px;
+  }
+
+  .reviews-all-title {
+    font-size: 1.05rem;
+  }
+
+  .reviews-all .reviews-link {
+    font-size: 0.95rem;
+  }
+
+  .reviews-all-links {
+    gap: 14px 24px;
+  }
+}
+/* ==================================================
+   VÉLEMÉNYEK – végleges finomhangolás
+   ================================================== */
+
+/* Vélemény szövege */
+.review-card blockquote {
+  font-size: clamp(1.7rem, 2.15vw, 2.05rem);
+  line-height: 1.42;
+}
+
+/* Csillagok */
+.review-stars {
+  font-size: 0.95rem;
+  letter-spacing: 0.18em;
+}
+
+/* Vendég neve */
+.review-author {
+  font-size: 0.82rem;
+}
+
+/* Összes vélemény rész */
+.reviews-all {
+  margin-top: 42px;
+}
+
+.reviews-all-title {
+  margin: 0 0 16px;
+  color: var(--color-green-dark);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+}
+
+.reviews-all-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px 32px;
+}
+
+/* Facebook + Google */
+.reviews-all .reviews-link {
+  margin-top: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  gap: 10px;
+}
+
+/* Mobil */
+@media (max-width: 768px) {
+  .review-card blockquote {
+    font-size: 1.35rem;
+    line-height: 1.45;
+  }
+
+  .review-stars {
+    font-size: 0.9rem;
+  }
+
+  .review-author {
+    font-size: 0.78rem;
+  }
+
+  .reviews-all {
+    margin-top: 32px;
+  }
+
+  .reviews-all-title {
+    font-size: 1.05rem;
+  }
+
+  .reviews-all .reviews-link {
+    font-size: 0.95rem;
+  }
+
+  .reviews-all-links {
+    gap: 14px 24px;
+  }
+}
