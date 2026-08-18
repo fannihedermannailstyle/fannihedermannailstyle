@@ -2077,7 +2077,7 @@ align-self: start;
 }
 
 /* Kapcsolat – tablet */
-
+@media (max-width: 1020px) {
 .contact-layout {
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -2094,7 +2094,7 @@ align-self: start;
     .contact-booking {
         border-radius: 10px 150px 10px 10px;
     }
-
+/* Kapcsolat mobil */
 /* Kapcsolat – mobil */
 
 @media (max-width: 700px) {
@@ -4853,4 +4853,5 @@ p {
   width: 100%;
   height: 180px;
   border: 0;
+}
 }
