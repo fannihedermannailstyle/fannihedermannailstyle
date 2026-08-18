@@ -1969,6 +1969,8 @@ button {
 
 .contact-booking {
     position: relative;
+    height: fit-content;
+align-self: start;
     overflow: hidden;
     padding: clamp(45px, 6vw, 76px);
     color: #ffffff;
