@@ -1908,10 +1908,30 @@ button {
 
 .contact-layout {
     display: grid;
-    grid-template-columns: minmax(0, 0.8fr) minmax(420px, 1.2fr);
-    align-items: start;
-    gap: clamp(35px, 6vw, 80px);
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "salon booking"
+        "phone hours";
+    gap: 22px;
+    align-items: stretch;
 }
+
+.contact-salon {
+    grid-area: salon;
+}
+
+.contact-phone {
+    grid-area: phone;
+}
+
+.contact-booking {
+    grid-area: booking;
+}
+
+.contact-hours {
+    grid-area: hours;
+}
+
 
 .contact-details {
     display: grid;
