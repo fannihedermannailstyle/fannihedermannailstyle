@@ -1909,26 +1909,8 @@ button {
 .contact-layout {
     display: grid;
     grid-template-columns: minmax(0, 0.8fr) minmax(420px, 1.2fr);
-    grid-template-areas:
-        "salon booking"
-        "phone hours";
     align-items: start;
-    gap: 22px clamp(35px, 6vw, 80px);
-}
-.contact-salon {
-    grid-area: salon;
-}
-
-.contact-phone {
-    grid-area: phone;
-}
-
-.contact-booking {
-    grid-area: booking;
-}
-
-.contact-hours {
-    grid-area: hours;
+    gap: clamp(35px, 6vw, 80px);
 }
 
 .contact-details {
@@ -2077,15 +2059,11 @@ align-self: start;
 }
 
 /* Kapcsolat – tablet */
+
 @media (max-width: 1020px) {
-.contact-layout {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-        "salon"
-        "booking"
-        "phone"
-        "hours";
-}
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
 
     .contact-details {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2094,7 +2072,8 @@ align-self: start;
     .contact-booking {
         border-radius: 10px 150px 10px 10px;
     }
-/* Kapcsolat mobil */
+}
+
 /* Kapcsolat – mobil */
 
 @media (max-width: 700px) {
@@ -4853,5 +4832,4 @@ p {
   width: 100%;
   height: 180px;
   border: 0;
-}
 }
