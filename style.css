@@ -5631,3 +5631,63 @@ p {
         padding-left: 36px !important;
     }
 }
+
+/* ===== GYIK KATEGÓRIÁK LENYITÁSA ===== */
+
+.faq-group {
+    margin: 28px 0 0;
+    border: 0;
+}
+
+.faq-group > .faq-category {
+    list-style: none;
+    cursor: pointer;
+    position: relative;
+
+    /* több hely felül-alul */
+    padding: 22px 55px 22px 40px;
+
+    color: var(--color-green-dark);
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+/* Chrome alap nyilának eltüntetése */
+.faq-group > .faq-category::-webkit-details-marker {
+    display: none;
+}
+
+/* bal oldali arany vonal */
+.faq-group > .faq-category::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 28px;
+    height: 1px;
+    background: var(--color-gold);
+}
+
+/* jobb oldali lenyitó nyíl */
+.faq-group > .faq-category::after {
+    content: "⌄";
+    position: absolute;
+    right: 22px;
+    top: 50%;
+    transform: translateY(-55%);
+    font-size: 1.4rem;
+    color: var(--color-green);
+    transition: transform 0.25s ease;
+}
+
+.faq-group[open] > .faq-category::after {
+    transform: translateY(-45%) rotate(180deg);
+}
+
+/* kérdések csak kategória megnyitásakor jelenjenek meg */
+.faq-group-content {
+    padding-top: 6px;
+}
