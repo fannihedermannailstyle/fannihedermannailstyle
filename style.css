@@ -5493,3 +5493,122 @@ p {
         margin-top: 32px;
     }
 }
+/* =========================================================
+   GYIK – KOMPAKT VÉGLEGES FINOMÍTÁS
+   ========================================================= */
+
+.faq-section {
+    padding-top: 70px !important;
+    padding-bottom: 90px !important;
+}
+
+.faq-container {
+    width: min(calc(100% - 48px), 960px) !important;
+}
+
+/* Felső GYIK fejléc */
+.faq-heading {
+    max-width: none !important;
+    margin: 0 0 32px !important;
+    padding: 34px 42px 36px !important;
+    border-radius: 18px !important;
+}
+
+.faq-heading .section-eyebrow {
+    margin: 0 0 18px !important;
+}
+
+.faq-heading h2 {
+    margin: 0 !important;
+    font-size: clamp(3rem, 5vw, 4.4rem) !important;
+    line-height: 0.95 !important;
+}
+
+.faq-heading h2 span {
+    margin-top: 4px !important;
+}
+
+.faq-heading > p:last-child {
+    margin: 22px 0 0 !important;
+    max-width: 720px !important;
+    line-height: 1.65 !important;
+}
+
+/* Kategóriák */
+.faq-category {
+    margin: 32px 0 12px !important;
+}
+
+.faq-category:first-child {
+    margin-top: 0 !important;
+}
+
+/* Kérdés kártyák */
+.faq-item {
+    margin-bottom: 8px !important;
+    border-radius: 12px !important;
+}
+
+.faq-item summary {
+    min-height: 64px !important;
+    padding: 16px 70px 16px 24px !important;
+    font-size: 1.18rem !important;
+}
+
+.faq-item summary::after {
+    right: 20px !important;
+    width: 30px !important;
+    height: 30px !important;
+    font-size: 1.05rem !important;
+}
+
+/* Kinyitott válasz */
+.faq-answer {
+    padding: 0 70px 22px 24px !important;
+}
+
+.faq-answer p {
+    font-size: 0.98rem !important;
+    line-height: 1.7 !important;
+}
+
+/* Mobil */
+@media (max-width: 700px) {
+    .faq-section {
+        padding-top: 45px !important;
+        padding-bottom: 65px !important;
+    }
+
+    .faq-container {
+        width: calc(100% - 28px) !important;
+    }
+
+    .faq-heading {
+        padding: 28px 22px !important;
+        margin-bottom: 26px !important;
+    }
+
+    .faq-heading h2 {
+        font-size: clamp(2.6rem, 12vw, 3.6rem) !important;
+    }
+
+    .faq-category {
+        margin-top: 28px !important;
+    }
+
+    .faq-item summary {
+        min-height: 62px !important;
+        padding: 16px 58px 16px 18px !important;
+        font-size: 1.08rem !important;
+    }
+
+    .faq-item summary::after {
+        right: 16px !important;
+        width: 29px !important;
+        height: 29px !important;
+    }
+
+    .faq-answer {
+        padding: 0 18px 20px !important;
+    }
+}
