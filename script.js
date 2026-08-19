@@ -261,3 +261,18 @@ faqItems.forEach((item) => {
         });
     });
 });
+/* GYIK – egyszerre csak egy kategória legyen nyitva */
+
+const faqGroups = document.querySelectorAll(".faq-group");
+
+faqGroups.forEach((group) => {
+    group.addEventListener("toggle", () => {
+        if (!group.open) return;
+
+        faqGroups.forEach((otherGroup) => {
+            if (otherGroup !== group) {
+                otherGroup.open = false;
+            }
+        });
+    });
+});
