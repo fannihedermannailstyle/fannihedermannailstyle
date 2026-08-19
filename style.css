@@ -5612,3 +5612,22 @@ p {
         padding: 0 18px 20px !important;
     }
 }
+/* GYIK – kategóriák belső igazítása */
+
+.faq-category {
+    margin-left: 24px !important;
+    margin-right: 24px !important;
+    padding-left: 42px !important;
+}
+
+.faq-category::before {
+    left: 0 !important;
+}
+
+@media (max-width: 700px) {
+    .faq-category {
+        margin-left: 18px !important;
+        margin-right: 18px !important;
+        padding-left: 36px !important;
+    }
+}
