@@ -5691,3 +5691,24 @@ p {
 .faq-group-content {
     padding-top: 6px;
 }
+/* GYIK kategóriák – kompaktabb elrendezés */
+
+.faq-group {
+    margin: 0 !important;
+}
+
+.faq-group > .faq-category {
+    min-height: 68px;
+    padding: 22px 55px 22px 54px !important;
+    display: flex;
+    align-items: center;
+}
+
+.faq-group > .faq-category::before {
+    left: 20px !important;
+    width: 24px !important;
+}
+
+.faq-group + .faq-group {
+    border-top: 1px solid rgba(194, 154, 85, 0.18);
+}
