@@ -5805,3 +5805,42 @@ p {
         height: 8px;
     }
 }
+/* =========================================================
+   GYIK – UTOLSÓ VIZUÁLIS FINOMÍTÁS
+   ========================================================= */
+
+/* A fix fejléc ne takarja a GYIK tetejét */
+.faq-section {
+    padding-top: 150px !important;
+}
+
+/* Felső bemutatkozó kártya */
+.faq-heading {
+    box-shadow: 0 18px 55px rgba(49, 66, 55, 0.07);
+}
+
+/* Kategóriák külső kártyája */
+.faq-list {
+    box-shadow: 0 18px 55px rgba(49, 66, 55, 0.06);
+}
+
+/* Kategóriasorok picit kompaktabbak */
+.faq-group > .faq-category {
+    min-height: 68px !important;
+}
+
+/* Finomabb elválasztó */
+.faq-group + .faq-group {
+    border-top: 1px solid rgba(194, 154, 85, 0.16);
+}
+
+/* Mobilon ne legyen túl nagy felső tér */
+@media (max-width: 700px) {
+    .faq-section {
+        padding-top: 105px !important;
+    }
+
+    .faq-group > .faq-category {
+        min-height: 62px !important;
+    }
+}
