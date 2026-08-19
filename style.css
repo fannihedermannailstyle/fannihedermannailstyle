@@ -5712,3 +5712,96 @@ p {
 .faq-group + .faq-group {
     border-top: 1px solid rgba(194, 154, 85, 0.18);
 }
+/* =========================================================
+   GYIK – PRÉMIUM FINOMHANGOLÁS
+   ========================================================= */
+
+/* Több levegő a fejléc és a kategóriák között */
+.faq-list {
+    margin-top: 48px !important;
+}
+
+/* Kategóriasorok */
+.faq-group {
+    background: rgba(255, 253, 249, 0.82);
+    transition:
+        background-color 220ms ease,
+        box-shadow 220ms ease;
+}
+
+.faq-group:hover {
+    background: rgba(255, 253, 249, 0.96);
+}
+
+.faq-group[open] {
+    background: rgba(255, 253, 249, 0.98);
+    box-shadow: inset 0 0 0 1px rgba(49, 93, 72, 0.06);
+}
+
+/* Kategóriacím */
+.faq-group > .faq-category {
+    min-height: 72px !important;
+    padding: 22px 72px 22px 58px !important;
+    letter-spacing: 0.13em !important;
+}
+
+/* Arany vonal */
+.faq-group > .faq-category::before {
+    width: 28px !important;
+    background-color: var(--color-gold) !important;
+}
+
+/* Elegáns chevron a "v" helyett */
+.faq-group > .faq-category::after {
+    content: "" !important;
+    position: absolute;
+    right: 28px;
+    top: 50%;
+
+    width: 9px;
+    height: 9px;
+
+    border-right: 1.5px solid var(--color-green);
+    border-bottom: 1.5px solid var(--color-green);
+
+    transform: translateY(-65%) rotate(45deg);
+    transition: transform 220ms ease;
+}
+
+/* Nyitott állapot */
+.faq-group[open] > .faq-category::after {
+    transform: translateY(-35%) rotate(225deg);
+}
+
+/* A lenyíló kérdések kapjanak kis belső teret */
+.faq-group-content {
+    padding: 0 14px 14px !important;
+}
+
+/* Kérdéskártyák finomítása */
+.faq-group-content .faq-item {
+    background: rgba(255, 255, 255, 0.78);
+    border-color: rgba(194, 154, 85, 0.18);
+}
+
+.faq-group-content .faq-item:hover {
+    background: rgba(255, 255, 255, 0.96);
+}
+
+/* Mobil */
+@media (max-width: 700px) {
+    .faq-list {
+        margin-top: 36px !important;
+    }
+
+    .faq-group > .faq-category {
+        min-height: 64px !important;
+        padding: 18px 58px 18px 50px !important;
+    }
+
+    .faq-group > .faq-category::after {
+        right: 20px;
+        width: 8px;
+        height: 8px;
+    }
+}
