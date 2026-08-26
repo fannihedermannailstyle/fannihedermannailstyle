@@ -4,18 +4,35 @@
 <head>
     <meta charset="UTF-8">
 
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18316310927"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18316310927"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'AW-18316310927');
-</script>
+      gtag('config', 'AW-18316310927');
+    </script>
 
+    <!-- Google Ads kapcsolatfelvétel konverzió -->
+    <script>
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof(url) != 'undefined') {
+            window.location = url;
+          }
+        };
+
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18316310927/gmHXCOrng-gcEI_z8p1E',
+          'event_callback': callback
+        });
+
+        return false;
+      }
+    </script>
 
     <meta
         name="referrer"
@@ -1282,22 +1299,24 @@
                         <div class="contact-actions">
 
                             <a
-                                class="primary-button"
-                                href="https://www.instagram.com/fannihedermannailstyle/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Instagram üzenet
-                            </a>
+    class="primary-button"
+    href="https://www.instagram.com/fannihedermannailstyle/"
+    target="_blank"
+    rel="noopener noreferrer"
+    onclick="gtag_report_conversion();"
+>
+    Instagram üzenet
+</a>
 
                             <a
-                                class="secondary-button"
-                                href="https://www.facebook.com/profile.php?id=61552334764515"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Facebook üzenet
-                            </a>
+    class="secondary-button"
+    href="https://www.facebook.com/profile.php?id=61552334764515"
+    target="_blank"
+    rel="noopener noreferrer"
+    onclick="gtag_report_conversion();"
+>
+    Facebook üzenet
+</a>
 
                         </div>
 
