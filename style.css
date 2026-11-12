@@ -1186,6 +1186,19 @@ button {
     border-top: 1px solid rgba(194, 154, 85, 0.32);
 }
 
+/* S/M/L méretárak megjelenítése */
+.price-list .price-item:nth-child(-n+2) strong {
+    font-size: clamp(12px, 0.85vw, 15px);
+    font-weight: 600;
+    letter-spacing: 0;
+    white-space: nowrap;
+}
+
+.price-list .price-item:nth-child(-n+2) {
+    gap: 12px;
+}
+
+
 .price-item {
     position: relative;
     width: 100%;
