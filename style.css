@@ -1187,31 +1187,28 @@ button {
 }
 
 
-/* S/M/L méretárak */
-.price-list .price-item:has(.size-prices) {
-    align-items: center;
-    gap: 16px;
-}
+/* S/M/L árak – végleges elrendezés */
 
-.size-prices {
+.price-item > .size-prices {
     display: grid;
     grid-template-columns: repeat(3, max-content);
-    gap: 18px;
+    align-items: center;
+    gap: 16px;
     flex-shrink: 0;
 }
 
-.size-prices span {
+.price-item .size-prices .size-price {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 5px;
     color: var(--color-green-dark);
-    font-size: 1.05rem;
+    font-size: 1rem;
     font-weight: 600;
     white-space: nowrap;
 }
 
-.size-prices small {
+.price-item .size-prices .size-price small {
     color: var(--color-gold);
     font-size: 0.8rem;
     font-weight: 600;
@@ -1223,13 +1220,13 @@ button {
         align-items: flex-start;
     }
 
-    .size-prices {
+    .price-item > .size-prices {
         width: 100%;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 8px;
     }
 
-    .size-prices span {
+    .price-item .size-prices .size-price {
         font-size: clamp(0.8rem, 2.5vw, 1rem);
     }
 }
