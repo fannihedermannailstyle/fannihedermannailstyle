@@ -1186,13 +1186,54 @@ button {
     border-top: 1px solid rgba(194, 154, 85, 0.32);
 }
 
-/* S/M/L méretárak megjelenítése */
-.price-list .price-item:nth-child(-n+2) strong {
-    font-size: clamp(12px, 0.85vw, 15px);
+
+/* S/M/L méretárak */
+.price-list .price-item:has(.size-prices) {
+    align-items: center;
+    gap: 16px;
+}
+
+.size-prices {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    gap: 18px;
+    flex-shrink: 0;
+}
+
+.size-prices span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    color: var(--color-green-dark);
+    font-size: 1.05rem;
     font-weight: 600;
-    letter-spacing: 0;
     white-space: nowrap;
 }
+
+.size-prices small {
+    color: var(--color-gold);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+@media (max-width: 1100px) {
+    .price-list .price-item:has(.size-prices) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .size-prices {
+        width: 100%;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .size-prices span {
+        font-size: clamp(0.8rem, 2.5vw, 1rem);
+    }
+}
+
 
 .price-list .price-item:nth-child(-n+2) {
     gap: 12px;
